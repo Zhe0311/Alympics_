@@ -5,6 +5,7 @@ import openai
 class PlayGround:
     def __init__(self) -> None:
         self.players = []
+        self.game_setting = ""
 
     def add_player(self, new_player):
         self.players.append(new_player)
