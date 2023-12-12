@@ -23,8 +23,8 @@ class Player:
 class LLM:
     def __init__(self, engine="gpt4-32k", temperature=0.7, sleep_time=60) -> None:
         openai.api_type = "azure"   
-        openai.api_base = "https://mtutor-openai-prod.openai.azure.com/"
-        openai.api_version = "2023-07-01-preview"
+        openai.api_base = ""
+        openai.api_version = ""
         openai.api_key = ""
         self.engine = engine
         self.temperature = temperature
