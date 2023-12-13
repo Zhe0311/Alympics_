@@ -83,10 +83,10 @@ class waterAllocation(PlayGround):
         # Initial players: A, B, C, D and E
         if_persona = False
         self.add_player(myPlayer(self.game_setting, "Alex", 8, 70, if_persona, PERSONA_A))
-        self.add_player(myPlayer(self.game_setting, "Bob", 9, 75, if_persona, PERSONA_A))
-        # self.add_player(myPlayer(self.game_setting, "Cindy", 10, 100, if_persona, PERSONA_A))
-        # self.add_player(myPlayer(self.game_setting, "David", 11, 120, if_persona, PERSONA_A))
-        # self.add_player(myPlayer(self.game_setting, "Eric", 12, 120, if_persona, PERSONA_A))
+        self.add_player(myPlayer(self.game_setting, "Bob", 9, 75, if_persona, PERSONA_B))
+        self.add_player(myPlayer(self.game_setting, "Cindy", 10, 100, if_persona, PERSONA_C))
+        self.add_player(myPlayer(self.game_setting, "David", 11, 120, if_persona, PERSONA_D))
+        self.add_player(myPlayer(self.game_setting, "Eric", 12, 120, if_persona, PERSONA_E))
         logger.info("Initial players done.")
         
         self.survival_players = self.players
@@ -218,4 +218,4 @@ class waterAllocation(PlayGround):
         for i in range(1, n_round+1):
             self.run_single_round(i, supply_list[i-1])
         
-        self._save_history('./log.json')
+        self._save_history('./log.json') # change the log dirction here
